@@ -1,14 +1,20 @@
-//
-//  main.cpp
-//  a^b
-//
-//  Created by Белов Егор on 12.09.2024.
-//
 
 #include <iostream>
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    std::cout << "Enter a and b\n";
+    double a, t;
+    int b;
+    std::cin >> a >> b;
+    std::cout << std::endl;
+    t = a;
+    while (b != 0) {
+        if (b & 1) {
+            a *= t;
+        }
+        t *= t;
+        b >>= 1;
+    }
+    std::cout << a << std::endl;
     return 0;
 }
